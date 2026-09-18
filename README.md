@@ -22,6 +22,8 @@
 | **模块参数** | 地址码 / 波特率码 / 主动上传间隔在线读写；总线设备扫描 |
 | **三种通道** | SLCAN 串口 · PCAN-Basic · 内置模拟器（无硬件也能完整体验） |
 
+> 📦 **直接下载**：[最新 Release](https://github.com/BI7KHI/zskj-canio-tool/releases/latest) · 单文件 EXE 44.9 MB · SHA256 `3744ad975e308427f7062d7332f40dca6d7eff0628e915414635d0b8635d98af`
+
 **工程上的几个要点**
 
 - `canio/` 层**完全不依赖 GUI**，可单独用于脚本化测试或集成进其它程序
@@ -45,7 +47,9 @@
 ### 方式一：下载打包好的 EXE（推荐）
 
 到 [**Releases**](https://github.com/BI7KHI/zskj-canio-tool/releases) 页面下载最新版
-`CANIO继电器调试台.exe`，**双击即用**，无需安装 Python 或任何依赖。
+`zskj-canio-tool-v1.0.0.exe`，**双击即用**，无需安装 Python 或任何依赖。
+
+> 本地用 `python build.py` 自行打包时，输出文件名为 `dist/CANIO继电器调试台.exe`，内容与 Release 完全一致。
 
 > 未安装 `PCANBasic.dll` 时 PCAN 选项会自动禁用，不影响 SLCAN 与模拟器。
 
@@ -182,7 +186,10 @@ python app.py --selftest          # 一次性跑完前面几项
 打包后的 EXE 也带自检，结果写成 JSON，便于无控制台环境排查：
 
 ```bash
-CANIO继电器调试台.exe --check out.json
+# 本地打包产物
+dist/CANIO继电器调试台.exe --check out.json
+# Release 下载的版本
+zskj-canio-tool-v1.0.0.exe --check out.json
 ```
 
 ---
