@@ -1,0 +1,35 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# ---- 打包产物 ----
+build/
+dist/
+*.spec
+*.manifest
+
+# ---- 运行期产物 ----
+*.log
+canio_check.json
+out.json
+
+# ---- 第三方参考资料（体积大 / 版权归原厂，不随仓库分发）----
+# 产品使用手册（中盛科技）
+assets/数字量输入输出系列使用手册*.pdf
+# PCAN / USB-CAN 参考资料包（PEAK SDK、驱动、固件、上位机软件等，约 700 MB）
+assets/PCAN/
+vendor/
+
+# ---- 编辑器 / 系统 ----
+.vscode/
+.idea/
+*.swp
+Thumbs.db
+desktop.ini
